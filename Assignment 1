@@ -1,0 +1,33 @@
+#program to calculate super market bill
+sugar=150
+salt=60
+uraddaal=250
+oilpackets=140
+biryaniparticulars=140
+sugarquan=int(input('Enter sugar quantity: '))
+saltquan=int(input('Enter salt quantity: '))
+uraddaalquan=int(input('Enter urad daal quantity: '))
+oilpacketsquan=int(input('Enter oil packets quantity: '))
+biryaniparticularsquan=int(input('Enter biryani particulars quantity: '))
+total=(sugarquan*sugar)+(saltquan*salt)+(uraddaalquan*uraddaal)+(oilpacketsquan*oilpackets)+(biryaniparticularsquan*biryaniparticulars)
+if total>5000:
+    disc=total*10/100
+    tax=total*10/100
+elif total>3000:
+    disc=total*8/100
+    tax=total*10/100
+elif total>2000:
+    disc=total*5/100
+    tax=total*18/100
+elif total>1000:
+    disc=total*3/100
+    tax=total*18/100
+marketbill=total-disc+tax
+print('super market bill: ',marketbill)
+Output
+Enter sugar quantity: 50
+Enter salt quantity: 65
+Enter urad daal quantity: 67
+Enter oil packets quantity: 90
+Enter biryani particulars quantity: 150
+super market bill:  83550.0
